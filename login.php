@@ -29,7 +29,7 @@ reder{color:red;}
 if(isset($_POST["username"]) && isset($_POST["password"])){
 $username=$_POST["username"];
 $password=$_POST["password"];
-$query1="select * from credentials where Username=? and Password=?;";
+$query1="select * from Credentials where Username=? and Password=?;";
 $configured1=mysqli_prepare($conn,$query1);
 mysqli_stmt_bind_param($configured1,"ss",$username,$password);
 mysqli_stmt_execute($configured1);
